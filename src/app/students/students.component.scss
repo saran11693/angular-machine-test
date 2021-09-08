@@ -1,0 +1,45 @@
+.table-container {
+  margin-top: 5em;
+  padding: 2em;
+
+  button {
+    float: right;
+    margin-bottom: 2em;
+    background-color: #3a3a3a;
+    cursor: pointer;
+  }
+
+  table {
+    width: 100%;
+    background: none;
+    table-layout: fixed;
+    text-align: center;
+
+    .mat-header-cell {
+      background: #3a3a3a;
+      border-bottom-color: #b0b0b073;
+      color: #fff;
+      text-align: center;
+      text-transform: capitalize;
+      letter-spacing: 0.48px;
+    }
+    .mat-cell {
+      background-color: rgb(15, 15, 16);
+      border-bottom-color: #b0b0b073;
+      color: #fff;
+      text-transform: capitalize;
+      letter-spacing: 0.48px;
+
+      input {
+        background: none;
+        border: none;
+        color: #fff;
+        text-transform: capitalize;
+        letter-spacing: 0.48px;
+        width: 80%;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+  }
+}

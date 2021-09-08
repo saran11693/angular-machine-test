@@ -1,0 +1,26 @@
+[
+  {
+    "name": "std 1",
+    "mark1": 100,
+    "mark2": 90,
+    "mark3": 90,
+    "total": 280,
+    "rank": 1
+  },
+  {
+    "name": "std 2",
+    "mark1": 100,
+    "mark2": 80,
+    "mark3": 70,
+    "total": 250,
+    "rank": 2
+  },
+  {
+    "name": "std 3",
+    "mark1": 80,
+    "mark2": 90,
+    "mark3": 70,
+    "total": 240,
+    "rank": 3
+  }
+]

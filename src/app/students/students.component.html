@@ -1,0 +1,88 @@
+<!-- Table -->
+<div class="table-container">
+  <button
+    mat-mini-fab
+    color="primary"
+    matRipple
+    matTooltip="add more"
+    (click)="addStudent()"
+  >
+    <mat-icon>add</mat-icon>
+  </button>
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- sno Column -->
+    <ng-container matColumnDef="sno">
+      <th mat-header-cell *matHeaderCellDef>No.</th>
+      <td mat-cell *matCellDef="let element; let i = index">{{ i + 1 }}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element">
+        <input type="text" name="std_name" [(ngModel)]="element.name" />
+      </td>
+    </ng-container>
+
+    <!-- mark1 Column -->
+    <ng-container matColumnDef="mark1">
+      <th mat-header-cell *matHeaderCellDef>mark1</th>
+      <td mat-cell *matCellDef="let element; let i = index">
+        <input
+          type="text"
+          name="mark1"
+          [(ngModel)]="element.mark1"
+          (input)="validateTotal($event, i)"
+          (keypress)="numberOnly($event)"
+          maxlength="3"
+        />
+      </td>
+    </ng-container>
+
+    <!-- mark2 Column -->
+    <ng-container matColumnDef="mark2">
+      <th mat-header-cell *matHeaderCellDef>mark2</th>
+      <td mat-cell *matCellDef="let element; let i = index">
+        <input
+          type="text"
+          name="mark2"
+          [(ngModel)]="element.mark2"
+          (input)="validateTotal($event, i)"
+          (keypress)="numberOnly($event)"
+          maxlength="3"
+        />
+      </td>
+    </ng-container>
+
+    <!-- mark3 Column -->
+    <ng-container matColumnDef="mark3">
+      <th mat-header-cell *matHeaderCellDef>mark3</th>
+      <td mat-cell *matCellDef="let element; let i = index">
+        <input
+          type="text"
+          name="mark3"
+          [(ngModel)]="element.mark3"
+          (input)="validateTotal($event, i)"
+          (keypress)="numberOnly($event)"
+          maxlength="3"
+        />
+      </td>
+    </ng-container>
+
+    <!-- total Column -->
+    <ng-container matColumnDef="total">
+      <th mat-header-cell *matHeaderCellDef>total</th>
+      <td mat-cell *matCellDef="let element">{{ element.total }}</td>
+    </ng-container>
+
+    <!-- rank Column -->
+    <ng-container matColumnDef="rank">
+      <th mat-header-cell *matHeaderCellDef>rank</th>
+      <td mat-cell *matCellDef="let element; let i = index">{{ i + 1 }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>
